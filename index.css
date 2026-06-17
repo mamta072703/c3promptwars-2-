@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #fcfdfd;
+  color: #1e293b;
+  transition: filter 0.2s ease, font-size 0.2s ease;
+}
+
+/* High Contrast Accessibility Overrides (AAA standard matching 7:1+ contrast criteria) */
+.accessibility-high-contrast {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.accessibility-high-contrast div,
+.accessibility-high-contrast section,
+.accessibility-high-contrast main,
+.accessibility-high-contrast aside,
+.accessibility-high-contrast header,
+.accessibility-high-contrast footer {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.accessibility-high-contrast button,
+.accessibility-high-contrast select,
+.accessibility-high-contrast input,
+.accessibility-high-contrast textarea {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  border-radius: 4px !important;
+}
+
+.accessibility-high-contrast button:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Accessible focus overrides */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #10b981 !important;
+  outline-offset: 2px !important;
+}
+
+/* Accessibility Sizing multipliers */
+.text-scale-normal {
+  font-size: 100%;
+}
+.text-scale-large {
+  font-size: 116%;
+}
+.text-scale-extra {
+  font-size: 132%;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
